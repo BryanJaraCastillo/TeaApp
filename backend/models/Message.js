@@ -19,6 +19,23 @@ const MessageSchema = new Schema({
   timestamp: {
     type: Date,
     default: Date.now
+  },
+  deletedBySender: {
+    type: Boolean,
+    default: false
+  },
+  deletedByRecipient: {
+    type: Boolean,
+    default: false
+  },
+  deletedForEveryone: {
+    type: Boolean,
+    default: false
+  },
+  replyTo: {
+    type: Schema.Types.ObjectId,
+    ref: 'Message',
+    default: null
   }
 });
 
