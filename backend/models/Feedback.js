@@ -1,3 +1,6 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
 const FeedbackSchema = new Schema({
     content: String,
     user: {

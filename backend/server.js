@@ -1,34 +1,40 @@
+require('dotenv').config();
+const ConnectionDB = require('./connectionDB'); 
+
+//importar modulos
+const bcrypt = require('bcryptjs');
+const cors = require('cors');
 const express =require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
 
+
+// const eventRouter = require('./Routes/EventRoutes');
+
+
+
+
+//inicializar express
 const app = express();
+
+// //rutas
+// app.use('/events', eventRouter);
+
+
+
 
 //middlewares
 app.use(express.json());
 app.use(cors());
 
 
+
+//conexion base de datos mongodb con try/catch con archivo .env y connectionDB.js
+ConnectionDB();
+
 //rutas
 app.get('/', (req, res) => {
     res.send('Backend operativo');
 });
-
-//conexion base de datos mongodb con try/catch
-
-try {
-    mongoose.connect('mongodb://localhost:27017/test', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
-    });
-} catch (error) {
-    console.log(error);
-}  
-
-
-
-
 
 //puerto
 const PORT = process.env.PORT || 5000;
