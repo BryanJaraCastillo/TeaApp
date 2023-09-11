@@ -12,6 +12,7 @@ router.get('/', EventController.getAllEvents);
 // Rutas que requieren autenticación
 router.post('/create', isAuthenticated, EventController.createEvent);
 router.get('/:id', isAuthenticated, EventController.getEventById);
+router.get('/:name', isAuthenticated, EventController.getEventByName);
 router.put('/:id/update', isAuthenticated, EventController.updateEvent);
 router.delete('/:id/delete', isAuthenticated, EventController.deleteEvent);
 

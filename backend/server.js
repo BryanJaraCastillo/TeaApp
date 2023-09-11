@@ -2,10 +2,8 @@ require('dotenv').config();
 const ConnectionDB = require('./connectionDB'); 
 
 //importar modulos
-const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const express =require('express');
-const mongoose = require('mongoose');
 
 
 // const eventRouter = require('./Routes/EventRoutes');
@@ -16,8 +14,6 @@ const mongoose = require('mongoose');
 //inicializar express
 const app = express();
 
-// //rutas
-// app.use('/events', eventRouter);
 
 
 

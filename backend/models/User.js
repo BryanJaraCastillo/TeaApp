@@ -21,6 +21,10 @@ const UserSchema = new Schema({
     required: true
     // Asegúrate de hashear la contraseña antes de guardarla
   },
+  isVerified: {
+    type: Boolean,
+    default: false
+  },
   profile_picture: {
     type: String, // Aquí puedes almacenar la URL de la imagen
     default: 'default_profile_picture_url' // Ejemplo de URL por defecto
