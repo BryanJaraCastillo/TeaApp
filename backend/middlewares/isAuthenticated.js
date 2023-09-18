@@ -33,3 +33,6 @@ const isAuthenticated = async (req, res, next) => {
         res.status(500).json({message: error.message});
     }
 }
+
+//exportamos el middleware
+module.exports = isAuthenticated;

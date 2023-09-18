@@ -106,7 +106,7 @@ const deleteEvent = async (req, res) => {
             return res.status(404).json({message: 'Evento no encontrado'});
         }
         //devolvemos el json y el evento borrado 
-        res.status.json({message: 'Evento eliminado'});
+        res.status(200).json({message: 'Evento eliminado'});
     }catch (error) {
         //error 500
         res.status(500).json({message: error.message});
