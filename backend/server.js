@@ -10,7 +10,7 @@ const feedbackRoutes = require('./routes/feedbackRoutes');
 const groupRoutes = require('./routes/groupRoutes');
 const interestRoutes = require('./routes/interestRoutes');
 const messageRoutes = require('./routes/messageRoutes');
-const postRoutes = require('./routes/postRoutes');
+const postRoutes = require('./Routes/PostRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 const PORT = process.env.PORT || 5000;

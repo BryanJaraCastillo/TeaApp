@@ -1,6 +1,6 @@
 //UserRoutes.js (Rutas de usuarios)
 const express = require('express');
-const UserController = require('../controllers/UserController');
+const UserController = require('../Controllers/UserController');
 const isAuthenticated = require('../middlewares/isAuthenticated');
 
 const router = express.Router();

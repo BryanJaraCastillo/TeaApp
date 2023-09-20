@@ -1,7 +1,7 @@
 //EventRoutes.js: Rutas de eventos
 
 const express = require('express');
-const EventController = require('../controllers/EventController');
+const EventController = require('../Controllers/EventController');
 const isAuthenticated = require('../middlewares/isAuthenticated');
 
 const router = express.Router();

@@ -1,6 +1,6 @@
 //FeedbackRoutes.js (Rutas de feedback)
 const express = require('express');
-const FeedbackController = require('../controllers/FeedbackController');
+const FeedbackController = require('../Controllers/FeedbackController');
 const isAuthenticated = require('../middlewares/isAuthenticated');
 
 const router = express.Router();
