@@ -73,6 +73,7 @@ const getUserByName = async (req, res) => {
     const user = await User.find({ name: req.params.name });
 
     if (!user) {
+      console.log("esta llegando aca al controller")
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
 

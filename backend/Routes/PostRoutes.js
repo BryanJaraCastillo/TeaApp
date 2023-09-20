@@ -9,10 +9,10 @@ const router = express.Router();
 router.get('/', PostController.getAllPosts);
 
 // Rutas privadas (requieren autenticación)
-router.post('/create', isAuthenticated, PostController.createPost);
-router.get('/:id', isAuthenticated, PostController.getPostById);
-router.get('/:name', isAuthenticated, PostController.getPostByAuthor);
-router.put('/:id/update', isAuthenticated, PostController.updatePostById);
-router.delete('/:id/delete', isAuthenticated, PostController.deletePostById);
+router.post('/post', isAuthenticated, PostController.createPost);
+router.get('/post/:id', isAuthenticated, PostController.getPostById);
+router.get('/post/:name', isAuthenticated, PostController.getPostByAuthor);
+router.put('/post/:id/update', isAuthenticated, PostController.updatePostById);
+router.delete('/post/:id/delete', isAuthenticated, PostController.deletePostById);
 
 module.exports = router;

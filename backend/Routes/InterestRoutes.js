@@ -10,10 +10,10 @@ const router = express.Router();
 router.get('/', InterestController.getAllInterests);
 
 // Rutas privadas (requieren autenticación)
-router.post('/create', isAuthenticated, InterestController.createInterest);
-router.get('/:id', isAuthenticated, InterestController.getInterestById);
-router.get('/:name', isAuthenticated, InterestController.getInterestByName);
-router.put('/:id/update', isAuthenticated, InterestController.updateInterestById);
-router.delete('/:id/delete', isAuthenticated, InterestController.deleteInterest);
+router.post('/interest', isAuthenticated, InterestController.createInterest);
+router.get('/interest/:id', isAuthenticated, InterestController.getInterestById);
+router.get('/interest/:name', isAuthenticated, InterestController.getInterestByName);
+router.put('/interest/:id/update', isAuthenticated, InterestController.updateInterestById);
+router.delete('/interest/:id/delete', isAuthenticated, InterestController.deleteInterest);
 
 module.exports = router;

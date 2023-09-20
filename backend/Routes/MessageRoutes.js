@@ -11,7 +11,7 @@ router.get('/:id', isAuthenticated, MessageController.getMessages);
 
 
 // Rutas privadas (requieren autenticación)
-router.post('/create', isAuthenticated, MessageController.sendMessage);
-router.delete('/:id/delete', isAuthenticated, MessageController.deleteMessage);
+router.post('/message', isAuthenticated, MessageController.sendMessage);
+router.delete('/message/:id/delete', isAuthenticated, MessageController.deleteMessage);
 
 module.exports = router;

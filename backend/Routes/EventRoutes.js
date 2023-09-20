@@ -10,10 +10,10 @@ const router = express.Router();
 router.get('/', EventController.getAllEvents);
 
 // Rutas que requieren autenticación
-router.post('/create', isAuthenticated, EventController.createEvent);
-router.get('/:id', isAuthenticated, EventController.getEventById);
-router.get('/:name', isAuthenticated, EventController.getEventByName);
-router.put('/:id/update', isAuthenticated, EventController.updateEvent);
-router.delete('/:id/delete', isAuthenticated, EventController.deleteEvent);
+router.post('/event', isAuthenticated, EventController.createEvent);
+router.get('/event/:id', isAuthenticated, EventController.getEventById);
+router.get('/event/:name', isAuthenticated, EventController.getEventByName);
+router.put('/event/:id/update', isAuthenticated, EventController.updateEvent);
+router.delete('/event/:id/delete', isAuthenticated, EventController.deleteEvent);
 
 module.exports = router;

@@ -10,10 +10,10 @@ const router = express.Router();
 router.get('/', GroupController.getAllGroups);
 
 // Rutas privadas (requieren autenticación)
-router.post('/create', isAuthenticated, GroupController.createGroup);
-router.get('/:id', isAuthenticated, GroupController.getGroupsById);
-router.get('/:name', isAuthenticated, GroupController.getGroupsByName);
-router.put('/:id/update', isAuthenticated, GroupController.updateGroupById);
-router.delete('/:id/delete', isAuthenticated, GroupController.deleteGroupById);
+router.post('/group', isAuthenticated, GroupController.createGroup);
+router.get('/group/:id', isAuthenticated, GroupController.getGroupsById);
+router.get('/group/:name', isAuthenticated, GroupController.getGroupsByName);
+router.put('/group/:id/update', isAuthenticated, GroupController.updateGroupById);
+router.delete('/group/:id/delete', isAuthenticated, GroupController.deleteGroupById);
 
 module.exports = router;

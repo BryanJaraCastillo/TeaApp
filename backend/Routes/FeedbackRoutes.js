@@ -9,10 +9,10 @@ const router = express.Router();
 router.get('/', FeedbackController.getAllFeedbacks);
 
 // Rutas privadas (requieren autenticación)
-router.post('/create', isAuthenticated, FeedbackController.createFeedback);
-router.get('/:id', isAuthenticated, FeedbackController.getFeedbackById);
-router.get('/:name', isAuthenticated, FeedbackController.getFeedbackByName);
-router.put('/:id/update', isAuthenticated, FeedbackController.updateFeedback);
-router.delete('/:id/delete', isAuthenticated, FeedbackController.deleteFeedback);
+router.post('/feedback', isAuthenticated, FeedbackController.createFeedback);
+router.get('/feedback/:id', isAuthenticated, FeedbackController.getFeedbackById);
+router.get('/feedback/:name', isAuthenticated, FeedbackController.getFeedbackByName);
+router.put('/feedback/:id/update', isAuthenticated, FeedbackController.updateFeedback);
+router.delete('/feedback/:id/delete', isAuthenticated, FeedbackController.deleteFeedback);
 
 module.exports = router;
