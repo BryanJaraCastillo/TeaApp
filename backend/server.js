@@ -1,17 +1,19 @@
 require('dotenv').config();
-const ConnectionDB = require('./connectionDB');
+const ConnectionDB = require('./ConnectionDB');
 
 //importar modulos
 const cors = require('cors');
 const express = require('express');
-const authRoutes = require('./routes/authRoutes');
-const eventRoutes = require('./routes/eventRoutes');
-const feedbackRoutes = require('./routes/feedbackRoutes');
-const groupRoutes = require('./routes/groupRoutes');
-const interestRoutes = require('./routes/interestRoutes');
-const messageRoutes = require('./routes/messageRoutes');
+const authRoutes = require('./Routes/AuthRoutes');
+const eventRoutes = require('./Routes/EventRoutes');
+const feedbackRoutes = require('./Routes/FeedbackRoutes');
+const groupRoutes = require('./Routes/GroupRoutes');
+const interestRoutes = require('./Routes/InterestRoutes');
+const messageRoutes = require('./Routes/MessageRoutes');
 const postRoutes = require('./Routes/PostRoutes');
-const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./Routes/UserRoutes');
+
+
 
 const PORT = process.env.PORT || 5000;
 
