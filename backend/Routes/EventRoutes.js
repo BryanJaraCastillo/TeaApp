@@ -7,7 +7,7 @@ const isAuthenticated = require('../middlewares/isAuthenticated');
 const router = express.Router();
 
 // Rutas públicas (no requieren autenticación)
-router.get('/', EventController.getAllEvents);
+router.get('/events', EventController.getAllEvents);
 
 // Rutas que requieren autenticación
 router.post('/event', isAuthenticated, EventController.createEvent);

@@ -4,10 +4,11 @@ const express = require('express');
 const MessageController = require('../Controllers/MessageController');
 const isAuthenticated = require('../middlewares/isAuthenticated');
 
+
 const router = express.Router();
 
 
-router.get('/:id', isAuthenticated, MessageController.getMessages);
+router.get('/send', isAuthenticated, MessageController.getMessages);
 
 
 // Rutas privadas (requieren autenticación)

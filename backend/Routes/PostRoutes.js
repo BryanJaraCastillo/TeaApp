@@ -6,7 +6,7 @@ const isAuthenticated = require('../middlewares/isAuthenticated');
 const router = express.Router();
 
 // Rutas públicas (no requieren autenticación)
-router.get('/', PostController.getAllPosts);
+router.get('/posts', PostController.getAllPosts);
 
 // Rutas privadas (requieren autenticación)
 router.post('/post', isAuthenticated, PostController.createPost);
