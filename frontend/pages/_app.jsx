@@ -1,22 +1,14 @@
-// Importa las librerías necesarias
-import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-// Componente funcional para la página de inicio
-function HomePage() {
+function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <h1>Bienvenido a nuestra aplicación social!</h1>
-      
-      <div>
-        <p>Explora las funcionalidades de la aplicación y disfruta de la comunidad.</p>
-        <Link href="/profile">
-          <a>Ir a mi perfil</a>
-        </Link>
-        {/* Puedes agregar más Links aquí para navegar a otras páginas */}
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Component {...pageProps} />
+      <Footer />
+    </>
   );
 }
 
-// Exporta el componente HomePage
-export default HomePage;
+export default MyApp;
